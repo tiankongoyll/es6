@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+//
+//function testable(isTestable) {
+//return function (target) {
+//  target.isTestable = isTestable;
+//};
+//}
+//
+//var MyTestableClass = (function () {
+//function MyTestableClass() {
+//  _classCallCheck(this, _MyTestableClass);
+//}
+//
+//var _MyTestableClass = MyTestableClass;
+//MyTestableClass = testable(true)(MyTestableClass) || MyTestableClass;
+//return MyTestableClass;
+//})();
+//
+//console.log(MyTestableClass.isTestable);
+
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function testable(target) {
+  target.prototype.isTestable = true;
+}
+
+var MyTestableClass = (function () {
+  function MyTestableClass() {
+    _classCallCheck(this, _MyTestableClass);
+  }
+
+  var _MyTestableClass = MyTestableClass;
+  MyTestableClass = testable(MyTestableClass) || MyTestableClass;
+  return MyTestableClass;
+})();
+
+var obj = new MyTestableClass();
+console.log(obj.isTestable);
+
+
+
+
+
+		</script>
+	</body>
+</html>

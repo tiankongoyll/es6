@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			class point{
+//				doff(){
+//					console.log("jdff")
+//				}
+//			}
+//			console.log(typeof point)
+//			var b=new point;
+//         b.doff()
+
+
+
+//@testable
+//class MyTestableClass {
+//// ...
+//}
+
+//function testable(target) {
+//target.isTestable = true;
+//}
+//
+//MyTestableClass.isTestable 
+
+
+//function Point(x, y) {
+//this.x = x;
+//this.y = y;
+//}
+//
+//Point.prototype.toString = function () {
+//return '(' + this.x + ', ' + this.y + ')';
+//};
+//
+//var p = new Point(1, 2);
+//console.log(p)
+//console.log(p.toString())
+
+
+//class Point{
+//	constructor(x,y){
+//		this.x=x;
+//		this.y=y;
+//	}
+//	toString(){
+//		return '('+this.x+','+this.y+')';
+//	}
+//}
+//var p=new Point(1,2);
+//p.constru(1,2);
+//console.log(p.toString())
+
+
+//class B {};
+//let b=new B();
+//console.log(b.constructor===B.prototype.constructor);
+
+
+//class Point{
+//	constructor(){
+//		
+//	}
+//}
+//console.log(Point);
+//console.log(Object.keys(Point.prototype));
+//console.log(Object.getOwnPropertyNames(Point.prototype));
+//Object.assign(Point.prototype,{
+//	toString(){},
+//	toValue(){}
+//})
+//console.log(Point);
+//console.log(Point.prototype.constructor===Point)
+//console.log(Object.keys(Point.prototype));
+//console.log(Object.getOwnPropertyNames(Point.prototype));
+
+
+
+
+
+//class Point{
+//	constructor(x,y){
+//		
+//	}
+//	toString(){
+//		
+//	}
+//}
+//console.log(Object.keys(Point.prototype))
+//console.log(Object.getOwnPropertyNames(Point.prototype))
+
+
+//let methodName='getArea';
+//class Square{
+//	constructor(length){
+//		
+//	}
+//	[methodName](){
+//		
+//	}
+//}
+//console.log(Object.getOwnPropertyNames(Square.prototype))
+
+//class Point{};
+//console.log(Object.getOwnPropertyNames(Point.prototype))
+
+//class Foo{
+//	constructor(){
+//		return Object.create(null)
+//	}
+//}
+//console.log(new Foo() instanceof Foo)
+
+//class Point{
+//	constructor(x,y){
+//		this.x=x;
+//		this.y=y;
+//	}
+//	toString(){
+//		return '('+this.x+','+this.y+')';
+//	}
+//}
+//var point = new Point(2,3);
+//console.log(point.toString());
+
+
+//const MyClass=class Me{
+//	getClassName(){
+//		return Me.name
+//	}
+//}
+
+//let person = new class {
+//	constructor(name){
+//		this.name=name;
+//	}
+//	sayName(){
+//		console.log(this.name)
+//	}
+//}('zhangsan')
+//person.sayName();
+
+
+//class MyClass{
+//	constructor(){
+//		
+//	}
+//	get prop(){
+//		return 'getter';
+//	}
+//	set prop(value){
+//		console.log('setter'+value)
+//	}
+//}
+//let inst=new MyClass();
+//inst.prop=123;
+// console.log(inst.prop)
+
+
+//class Foo{
+//	constructor(...args){
+//		this.args=args;
+//	}
+//	*[Symbol.iterator](){
+//		for (let arg of this.args){
+//			yield arg;
+//		}
+//	}
+//}
+//for (let x of new Foo('hell','world')){
+//	console.log(x)
+//}
+
+
+//class Foo {
+//	static classMethod(){
+//		return 'hello';
+//	}
+//}
+//console.log(Foo.classMethod())
+//var foo= new Foo();
+//foo.classMethod()
+
+
+//class Foo {
+//	static classMethod(){
+//		return 'hello';
+//	}
+//}
+//class Bar extends Foo{
+//	
+//}
+//console.log(Bar.classMethod())
+
+
+//class Foo{
+//	static classMethod(){
+//		return 'hello';
+//	}
+//}
+//class Bar extends Foo{
+//	static classMethod(){
+//	   return super.classMethod()+',too';
+//	}
+//}
+//console.log(Bar.classMethod())
+
+
+//class MyClass{
+//	myProp = 42;
+//	
+//	constructor(){
+//		console.log(this.myProp)
+//	}
+//}
+
+//class MyClass {
+//myProp = 42;
+//
+//constructor() {
+//  console.log(this.myProp); // 42
+//}
+//}
+
+//class Foo {
+//static prop = 1;
+//}
+
+
+//function Person(name) {
+//if (new.target !== undefined) {
+//  this.name = name;
+//} else {
+//  throw new Error('必须使用new生成实例');
+//}
+//}
+//
+//var person = new Person('张三'); // 正确
+//console.log(person)
+//var notAPerson = Person.call(person, '张三');  // 报错
+
+//class Rectangle {
+//constructor(length, width) {
+//  console.log(new.target === Rectangle);
+//  this.length = length;
+//  this.width = width;
+//}
+//}
+//
+//var obj = new Rectangle(3, 4); 
+
+
+
+//继承
+//class Point{
+//	constructor(x,y){
+//		this.x=x;
+//		this.y=y;
+//	}
+//}
+//class ColorPoint extends Point{
+//	constructor(x,y,color){
+//		this.color = color;
+//		super(x,y);
+//		this.color=color
+//	}
+//}
+
+
+//class Point {
+//	constructor(x, y) {
+//	    this.x = x;
+//	    this.y = y;
+//	}
+//}
+//
+//class ColorPoint extends Point {
+//	constructor(x, y, color) {
+//	//  this.color = color; // ReferenceError
+//	    super(x, y);
+//	    this.color = color; // 正确
+//	}
+//}
+//let cp=new ColorPoint(25,8,'green')
+//console.log(cp)
+//console.log(Point);
+//console.log(ColorPoint)
+
+//console.log(Object.getPrototypeOf(ColorPoint)===Point)
+
+
+//class A {
+//constructor() {
+//  console.log(new.target.name);
+//}
+//}
+//class B extends A {
+//constructor() {
+//  super();
+//}
+//}
+//new A() // A
+//new B() // B
+
+//class A{
+//	p(){
+//		return 2;
+//	}
+//}
+//class B extends A{
+//	constructor(){
+//		super();
+//		console.log(super.p())
+//	}
+//}
+//let b=new B()
+
+
+//class A {}
+//A.prototype.x = 2;
+//
+//class B extends A {
+//constructor() {
+//  super();
+//  console.log(super.x) // 2
+//}
+//}
+//
+//let b = new B();
+
+//class A{
+//	constructor(){
+//		this.x=1;
+//	}
+//	print(){
+//		console.log(this.x)
+//	}
+//}
+//class B extends A{
+//	constructor(){
+//		super();
+//		this.x=2;
+//	}
+//	m(){
+//		super.print()
+//	}
+//}
+//let b=new B();
+//b.m()
+
+
+//class A{
+//	constructor(){
+//		this.x=1;
+//	}
+//}
+//class B extends A{
+//	constructor(){
+//		super();
+//		this.x=2;
+//		super.x=3;
+//		console.log(super.x);
+//		console.log(this.x);
+//	}
+//}
+//let b=new B();
+
+//class Parent{
+//	static myMethod(msg){
+//		console.log('static',msg);
+//	}
+//	myMethod(msg){
+//		console.log('instance',msg);
+//	}
+//}
+//class Child extends Parent{
+//	static myMethod(msg){
+//		super.myMethod(msg);
+//	}
+//	myMethod(msg){
+//		super.myMethod(msg)
+//	}
+//}
+//Child.myMethod(1);
+//var child=new Child();
+//child.myMethod(2)
+
+
+//class A {}
+//
+//class B extends A {
+//constructor() {
+//  super();
+//  console.log(super.valueOf() instanceof B); // true
+//}
+//}
+//
+//let b = new B();
+
+
+//class A {
+//}
+//
+//class B extends A {
+//}
+//
+//console.log(B.__proto__ === A) // true
+//console.log(B.prototype.__proto__ === A.prototype) 
+
+
+class MyArray extends Array{
+	constructor(...args){
+		super(...args);
+	}
+}
+var arr = new MyArray();
+//arr[0]=12;
+//console.log(arr.length)
+arr.length = 0;
+console.log(arr[0])
+
+
+
+
+
+		</script>
+		
+		
+	</body>
+</html>

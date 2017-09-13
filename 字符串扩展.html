@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="result">
+			
+		</div>
+		
+		<script type="text/javascript">
+//			var str="\u0061"
+//			console.log(str)
+
+//          var str="\uD842\uDFB7"
+//			console.log(str)
+
+//          var str="\u{20BB7}"
+//			console.log(str)
+
+//var str="\u{41}\u{42}\u{43}";
+//console.log(str)
+
+//let str="\u{6F}";
+//console.log(str)
+
+//let hello=123;
+//console.log(hell\u{6F})
+
+//var s="𠮷";
+//console.log(s.length);
+
+//for (let codePoint of 'foopi'){
+//	console.log(codePoint)
+//}
+
+//var str="hello worle"
+//console.log(str.indexOf("o"));
+//console.log(str.startsWith("hel"))
+//console.log(str.endsWith("le"))
+//console.log(str.includes("he"))
+//console.log(str.includes('worle',6))
+//console.log(str.endsWith('hello',5))
+
+//let str="ndf";
+//console.log(str.repeat(3))
+
+//let str="sc";
+//console.log(str.padStart(5,'ab'))
+//console.log(str.padEnd(5,'we'))
+
+
+//let basket={
+//	count:"hao",
+//	onSale:"kkkk"
+//}
+//$('#result').append(
+//'There are <b>' + basket.count + '</b> ' +
+//'items in your basket, ' +
+//'<em>' + basket.onSale +
+//'</em> are on sale!'
+//);
+
+//$("#result").append(`
+//There are <b>${basket.count+"jjjj"}</b> items
+// in your basket, <em>${basket.onSale}</em>
+//are on sale!
+//`)
+
+//$('#result').html(`hdkjhfkdjfdf jdjf
+//<ul>
+//     <li>first</li>
+//     <li>second</li>
+//</ul>
+//`);
+
+//const tmpl=addrs=>`
+//  <table>
+//    ${addrs.map(addr=>`
+//      <tr><td>${addr.first}</td></tr>
+//      <tr><td>${addr.last}</td></tr>
+//    `).join('')}
+//    </table>
+//`;
+//const data = [
+//  { first: '<Jane>', last: 'Bond' },
+//  { first: 'Lars', last: '<Croft>' },
+//];
+//console.log(tmpl(data));
+
+//let str='return'+'`hello${name}`';
+//let func=new Function('name',str);
+//console.log(func('jack'))
+
+//let str='(name)=>`hello ${name}!`';
+//let func=eval.call(null,str);
+//console.log(func('jsck'))
+
+//console.log("abc".charAt(1))
+//console.log("abc".at(1))
+
+//let a=5;
+//let b=10;
+//console.log(`hello ${a+b} word ${a*b}`)
+
+//let a=5;
+//let b=10;
+//function tag(s,v1,v2){
+//	console.log(s);
+//	console.log(s[0]);
+//	console.log(s[1]);
+//	console.log(s[2]);
+//	console.log(v1);
+//	console.log(v2);
+//	return "ok";
+//}
+//tag`hello ${a+b} world ${a*b}`;
+
+
+var total = 30;
+var msg = passthru`The total is ${total} (${total*1.05} with tax)`;
+
+function passthru(literals) {
+  var result = '';
+  var i = 0;
+   console.log(literals)
+  while (i < literals.length) {
+    result += literals[i++];
+    if (i < arguments.length) {
+      result += arguments[i];
+    }
+  }
+
+  return result;
+}
+
+// "The total is 30 (31.5 with tax)"
+console.log(msg)
+
+
+		</script>
+	</body>
+</html>

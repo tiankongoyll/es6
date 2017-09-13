@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function log(x,y="world"){
+//			    console.log(x+y)
+//			}
+//			log("hello","")
+
+
+//let x = 99;
+//function foo(p = x + 1) {
+//console.log(p);
+//}
+//foo() 
+//x=100
+//foo() 
+
+
+//function foo({x,y=5}){
+//	console.log(x)
+//	console.log(y)
+//}
+//foo({})
+//foo({x:1})
+//foo({x:1,y:3})
+
+//function fetch(url, { body = '', method = 'GET', headers = {} }) {
+//console.log(body);
+//console.log(method);
+//console.log(headers);
+//
+//}
+//fetch('http://example.com', {})
+//fetch('http://example.com', {method:"hhh",body:"jjj"})
+//fetch('http://example.com', {method:"hhh",body:"jjj",headers:"kkk"})
+	
+//function m1({x = 0, y = 0} = {}) {
+//return [x, y];
+//}	
+//console.log(m1({x:3,y:8}))	
+//console.log(m1())
+
+
+//function m2({x,y}={x:0,y:0}){
+//	return [x,y]
+//}
+//console.log(m2())
+//console.log(m2({x:3}))
+	
+	
+	
+//let foo = 'outer';
+//
+//function bar(func = x => foo) {
+//let foo = 'inner';
+//console.log(func());
+//}
+//
+//bar(); // outer	
+
+
+//var x = 1;
+//function foo(x, y = function() { x = 2; }) {
+//var x = 3;
+//y();
+//console.log(x);
+//}
+//
+//foo() //
+
+//function add(...val){
+//	let sum=0;
+//	for(let va of val){
+//		sum += va
+//	}
+//	return sum
+//}
+//console.log(add(2,5,3))
+
+//var arr1 = ['g', 'b'];
+//var arr2 = ['c'];
+//var arr3 = ['d', 'e'];
+//console.log(...arr1,...arr2,...arr3)
+
+
+//const [first,sede,...rest]=[1,2,3,4,5,6]
+//console.log(first);
+//console.log(rest);
+//console.log(sede)
+
+//console.log([...'hello'])
+
+//let map = new Map([
+//	[1,'one'],
+//	[2,'two'],
+//	[3,'three']
+//])
+//let arr=[...map.keys()]
+//console.log(arr)
+
+//var go=function*(){
+//	  yield 1;
+//	  yield 2;
+//	  yield 3;
+//}
+//console.log([...go()])
+
+//var f=v=>v;
+//var f= function(v){
+//	return v;
+//}
+//console.log(f(2))
+
+//var f=()=>5
+//console.log(f())
+
+//var sum=(num1,num2)=>num1+num2
+//console.log(sum(3,4))
+
+//var sum = (num1, num2) => { return num1 + num2; }
+//console.log(sum(6,4))
+
+//var getd=(id,name)=>({id:id,name:name})
+//console.log(getd(2,"xiaoeg"))
+
+//let obj={first:"kais",last:"jies"}
+//const full=({first,last})=>first+' '+last;
+//console.log(full(obj))
+
+//const isEven=n=>n%2==0;
+//console.log(isEven(6))
+
+//console.log([1,2,3].map(x=>x*x))
+
+
+//
+//function foo() {
+//setTimeout(() => {
+//  console.log('id:', this.id);
+//}, 100);
+//}
+//var id = 21;
+//foo.call({ id: 42 });
+
+//function Timer() {
+//this.s1 = 0;
+//this.s2 = 0;
+//// 箭头函数
+//setInterval(() => this.s1++, 1000);
+//// 普通函数
+//setInterval(function () {
+//  this.s2++;
+//}, 1000);
+//}
+//
+//var timer = new Timer();
+//
+//setTimeout(() => console.log('s1: ', timer.s1), 3100);
+//setTimeout(() => console.log('s2: ', timer.s2), 3100);
+
+//function Timer() {
+//this.s1 = 0;
+//this.s2 = 0;
+//// 箭头函数
+//setInterval(() => console.log(this.s1++), 1000);
+//// 普通函数
+//setInterval(function () {
+//  this.s2++;
+//}, 1000);
+//}
+
+//var timer = new Timer();
+//
+//setTimeout(() => console.log('s1: ', timer.s1), 3100);
+//setTimeout(() => console.log('s2: ', timer.s2), 3100);
+
+//function foo(){
+//	setTimeout(()=>{
+//		console.log('afgs',arguments)
+//	},100)
+//}
+//foo(2,3,4,5);
+
+//function insert(value){
+//	return {into:function(array){
+//		return{after:function(afterValue){
+//			array.splice(array.indexOf(afterValue)+1,0,value);
+//			return array;
+//		}}
+//	}}
+//}
+//insert(2).into([1,3]).after(1);
+
+
+//function insert(value) {
+//return {into: function (array) {
+//  return {after: function (afterValue) {
+//    array.splice(array.indexOf(afterValue) + 1, 0, value);
+//    return array;
+//  }};
+//}};
+//}
+//insert(2)
+//console.log(insert(2).into([1, 3]).after(1))
+//alert("ewe")
+
+//let insert=(value)=>({into:(array)=>({after:(afterValue)=>{
+//	array.splice(array.indexOf(afterValue)+1,0,value);
+//	return array;
+//}})});
+//console.log(insert(2).into([1,3]).after(1))
+
+//const pipeline=(...funcs)=>
+//  val=>funcs.reduce((a,b)=>b(a),val);
+//const plus1=a=>a+1;
+//const mult2=a=>a*2;
+//const addThenMult=pipeline(plus1,mult2);
+//console.log(addThenMult(5))
+
+const pipeline = (...funcs) =>
+val => funcs.reduce((a, b) => b(a), val);
+
+const plus1 = a => a + 1;
+const mult2 = a => a * 2;
+const addThenMult = pipeline(plus1, mult2);
+
+//addThenMult(5)
+console.log(addThenMult(5))
+
+//const plus1 = a => a + 1;
+//const mult2 = a => a * 2;
+
+//mult2(plus1(5))
+//console.log(mult2(plus1(5)))
+
+		</script>
+	</body>
+</html>

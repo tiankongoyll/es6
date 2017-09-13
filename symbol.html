@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			let s=Symbol();
+//			console.log(typeof s)
+
+//var s1 = Symbol('foo');
+//var s2 = Symbol('bar');
+//
+//console.log(s1)// Symbol(foo)
+//console.log(s2)// Symbol(bar)
+//
+//console.log(s1.toString())// "Symbol(foo)"
+//console.log(s2.toString())// "Symbol(bar)"
+
+//var mySymbol=Symbol();
+//var a={};
+//a.mySymbol="hello";
+//console.log(a)
+//console.log(a.mySymbol) 
+//console.log(a[mySymbol])
+//console.log(a["mySymbol"])
+
+//var obj={};
+//var a=Symbol("k");
+//var b=Symbol("j");
+//obj[a]="hello";
+//obj[b]="world";
+//var bbnc=Object.getOwnPropertySymbols(obj);
+//console.log(obj)
+//console.log(bbnc)
+//console.log(obj[a])
+
+
+
+//var obj = {};
+//var a = Symbol('a');
+//var b = Symbol('b');
+//
+//obj[a] = 'Hello';
+//obj[b] = 'World';
+//
+//var objectSymbols = Object.getOwnPropertySymbols(obj);
+//
+//console.log(objectSymbols) 
+			
+let obj = {
+  [Symbol('my_key')]: 1,
+  enum: 2,
+  nonEnum: 3
+};
+console.log(obj);
+console.log(Reflect.ownKeys(obj))
+
+			
+			
+			
+		</script>
+	</body>
+</html>
